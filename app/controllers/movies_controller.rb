@@ -44,8 +44,6 @@ class MoviesController < ApplicationController
     end
   end
 
-  # DELETE /movies/1
-  # DELETE /movies/1.json
   def destroy
     @movie.destroy
     respond_to do |format|
@@ -55,13 +53,11 @@ class MoviesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_movie
       @movie = Movie.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
-      params.require(:movie).permit(:title, :description, :movie_length, :director, :rating)
+      params.require(:movie).permit(:title, :description, :movie_length, :director, :rating, :image)
     end
 end
