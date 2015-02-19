@@ -1,28 +1,29 @@
-<%= image_tag @movie.image.url(:medium)%>
-<p>
-  <strong>Title:</strong>
-  <%= @movie.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @movie.description %>
-</p>
 
-<p>
-  <strong>Movie length:</strong>
-  <%= @movie.movie_length %>
-</p>
+<section class="container">
+            <div class="col-sm-8 col-md-9">
+                <div class="movie">
 
-<p>
-  <strong>Director:</strong>
-  <%= @movie.director %>
-</p>
+                    <div class="movie__info">
+                        <div class="col-sm-6 col-md-6 movie-mobile">
+                            <div class="movie__images">
+                                <%= image_tag @movie.image.url(:medium)%>
+                            </div>
+                        </div>
 
-<p>
-  <strong>Rating:</strong>
-  <%= @movie.rating %>
-</p>
+                        <div class="col-sm-6 col-md-6">
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
-<%= link_to 'Back', movies_path %>
+                            <p class="movie__option"><strong>Title: </strong><%= @movie.title %></p>
+                            <p class="movie__option"><strong>Description: </strong><%= @movie.description %></p>
+                            <p class="movie__option"><strong>Movie length: </strong><%= @movie.movie_length %></p>
+                            <p class="movie__option"><strong>Director: </strong><%= @movie.director %></p>
+                            <p class="movie__option"><strong>Rating: </strong><%= @movie.rating %></p>
+
+                        </div>
+                        <%= link_to 'Edit', edit_movie_path(@movie) %> |
+                        <%= link_to 'Back', movies_path %>
+                    </div>
+                </div>
+            </div>
+
+</section>

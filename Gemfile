@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise', '~> 3.4.1'
 gem 'paperclip', '~> 4.2.1'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
